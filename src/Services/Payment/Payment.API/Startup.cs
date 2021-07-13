@@ -68,15 +68,15 @@ namespace Payment.API
                 endpoints.MapControllers();
                 endpoints.MapSubscribeHandler();
 
-                endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-                {
-                    Predicate = _ => true,
-                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-                });
-                endpoints.MapHealthChecks("/liveness", new HealthCheckOptions
-                {
-                    Predicate = r => r.Name.Contains("self")
-                });
+                //endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
+                //{
+                //    Predicate = _ => true,
+                //    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                //});
+                //endpoints.MapHealthChecks("/liveness", new HealthCheckOptions
+                //{
+                //    Predicate = r => r.Name.Contains("self")
+                //});
             });
         }
 
